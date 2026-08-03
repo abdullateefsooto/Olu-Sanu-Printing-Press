@@ -227,7 +227,7 @@ function openModal(certType) {
         modalTitle.textContent = 'Certificate of Incorporation - OLU-SANU GLOBAL LTD';
     } else if (certType === 'cert-business') {
         modalImg.src = './assets/images/1979.png';
-        modalTitle.textContent = 'Business Name Registration - QLU-BANU PAINTING PRESS';
+        modalTitle.textContent = 'Business Name Registration - OLU-SANU PAINTING PRESS';
     }
 
     modal.classList.add('active');
