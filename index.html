@@ -84,7 +84,7 @@
 
             <div class="hero-image">
                 <div class="hero-image-wrapper">
-                    <span class="icon-display">🖨️</span>
+                    <span class="icon-display"><img src="./assets/images/logo.jpeg" alt=""></span>
                     <h3>Your Print Partner</h3>
                     <p>Offset • Digital • Wide Format • Finishing</p>
                     <div style="margin-top:20px; color:rgba(255,255,255,0.3); font-size:0.85rem;">
@@ -358,7 +358,7 @@ MISSION, VISION & VALUES
                     <h4>Olaniyan Azeez Adeyemi</h4>
                     <div class="role">Ceo / md</div>
                     <div class="years">16 years experience</div>
-                    <div class="bio">B.A. Fine & Applied Arts (Graphic Design) — LAUTECH</div>
+                    <div class="bio">B.Tech. Fine & Applied Arts (Graphic Design) — LAUTECH</div>
                 </div>
 
                 <div class="team-card">
@@ -382,6 +382,46 @@ MISSION, VISION & VALUES
                 </div>
         </div>
     </section>
+
+
+
+    <!-- ============================================
+   CERTIFICATES
+   ============================================ -->
+<section class="certificates" id="certificates">
+    <div class="container">
+        <h2 class="section-title">Our <span class="gold">Certifications</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">
+            Officially recognized — trusted and certified by Nigerian regulatory bodies.
+        </p>
+
+        <div class="cert-grid">
+            <!-- Certificate 1: CAC Incorporation -->
+            <div class="cert-card">
+                <div class="cert-image-wrapper">
+                    <img src="./assets/images/2024.png" alt="CAC Certificate of Incorporation" />
+                    <div class="cert-overlay" onclick="openModal('cert-cac')">
+                        <i class="fas fa-search-plus"></i>
+                        <span>View Certificate</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 2: Business Name Registration -->
+            <div class="cert-card">
+                <div class="cert-image-wrapper">
+                    <img src="./assets/images/1979.png" alt="Business Name Registration" />
+                    <div class="cert-overlay" onclick="openModal('cert-business')">
+                        <i class="fas fa-search-plus"></i>
+                        <span>View Certificate</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- ============================================
     CONTACT
@@ -421,14 +461,17 @@ MISSION, VISION & VALUES
                     </div>
                 </div>
 
-                <form class="contact-form" action="#" method="POST">
-                    <input type="text" placeholder="Your Full Name" required />
-                    <input type="email" placeholder="Your Email Address" required />
-                    <input type="tel" placeholder="Your Phone Number" />
-                    <input type="text" placeholder="Subject (e.g., Quote Request)" />
-                    <textarea placeholder="Tell us about your printing needs..."></textarea>
-                    <button type="submit" class="btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
-                </form>
+            <form class="contact-form" id="contact-form">
+                <input type="text" id="from_name" placeholder="Your Full Name" required />
+                <input type="email" id="from_email" placeholder="Your Email Address" required />
+                <input type="tel" id="from_phone" placeholder="Your Phone Number" />
+                <input type="text" id="subject" placeholder="Subject (e.g., Quote Request)" />
+                <textarea id="message" placeholder="Tell us about your printing needs..." required></textarea>
+                <button type="submit" class="btn-primary" id="sendBtn">
+                    Send Message <i class="fas fa-paper-plane"></i>
+                </button>
+                <div id="form-status" style="margin-top: 12px; display: none;"></div>
+            </form>
             </div>
         </div>
     </section>
@@ -448,9 +491,9 @@ MISSION, VISION & VALUES
                     </p>
                     <!-- Social Icons -->
                     <div class="footer-social">
-                        <a href="https://facebook.com/yourpage" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://instagram.com/yourpage" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://tiktok.com/@yourpage" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/p/Olu-Sanu-Printing-Press-100054486159022/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/olusanugloballimited/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@olusanuprintingpress" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                         <a href="https://wa.me/2348066200781" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
@@ -510,10 +553,22 @@ MISSION, VISION & VALUES
     <a href="https://wa.me/2348066200781" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-
+    
+    <!-- ============================================
+       CERTIFICATE MODAL
+       ============================================ -->
+    <div class="cert-modal" id="cert-modal">
+        <div class="cert-modal-content">
+            <button class="cert-modal-close" onclick="closeModal()">✕</button>
+            <img id="cert-modal-img" src="" alt="Certificate" />
+            <h3 class="cert-modal-title" id="cert-modal-title"></h3>
+        </div>
+    </div>
     <!-- ============================================
     JAVASCRIPT
     ============================================ -->
     <script src="./assets/js/main.js"></script>
+    <!-- ===== EMAILJS SDK ===== -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
 </html>

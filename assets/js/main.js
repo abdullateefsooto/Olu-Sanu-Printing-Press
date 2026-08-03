@@ -140,3 +140,123 @@ serviceCards.forEach((card, index) => {
 console.log('🚀 Olu-Sanu Global Limited website loaded successfully!');
 console.log('📧 For support: olusanugloballimited@gmail.com');
 console.log('📞 Call us: 08066200781');
+
+// ============================================
+// EMAILJS CONTACT FORM
+// ============================================
+
+// Initialize EmailJS with your Public Key
+(function() {
+    emailjs.init({
+        publicKey: "YOUR_PUBLIC_KEY_HERE", // ← REPLACE WITH YOUR KEY
+    });
+})();
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    const statusDiv = document.getElementById('form-status');
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const btn = document.getElementById('sendBtn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+            btn.disabled = true;
+
+            statusDiv.style.display = 'block';
+            statusDiv.style.color = '#ffffff';
+            statusDiv.innerHTML = 'Sending your message...';
+
+            // Get form data
+            const from_name = document.getElementById('from_name').value;
+            const from_email = document.getElementById('from_email').value;
+            const from_phone = document.getElementById('from_phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Create email parameters
+            const templateParams = {
+                from_name: from_name,
+                from_email: from_email,
+                from_phone: from_phone,
+                subject: subject,
+                message: message,
+                to_email: 'olusanugloballimited@gmail.com'
+            };
+
+            // Send email using EmailJS
+            emailjs.send(
+                'YOUR_SERVICE_ID_HERE',  // ← REPLACE WITH YOUR SERVICE ID
+                'YOUR_TEMPLATE_ID_HERE', // ← REPLACE WITH YOUR TEMPLATE ID
+                templateParams
+            )
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                statusDiv.style.color = '#22c55e';
+                statusDiv.innerHTML = '✅ Message sent successfully! We\'ll get back to you shortly.';
+                form.reset();
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            })
+            .catch(function(error) {
+                console.log('FAILED...', error);
+                statusDiv.style.color = '#ef4444';
+                statusDiv.innerHTML = '❌ Failed to send. Please try again or call us directly.';
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            });
+        });
+    }
+});
+
+// ============================================
+// CERTIFICATE MODAL
+// ============================================
+
+function openModal(certType) {
+    const modal = document.getElementById('cert-modal');
+    const modalImg = document.getElementById('cert-modal-img');
+    const modalTitle = document.getElementById('cert-modal-title');
+
+    if (!modal || !modalImg || !modalTitle) return;
+
+    if (certType === 'cert-cac') {
+        modalImg.src = './assets/images/2024.png';
+        modalTitle.textContent = 'Certificate of Incorporation - OLU-SANU GLOBAL LTD';
+    } else if (certType === 'cert-business') {
+        modalImg.src = './assets/images/1979.png';
+        modalTitle.textContent = 'Business Name Registration - QLU-BANU PAINTING PRESS';
+    }
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const modal = document.getElementById('cert-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Close modal on background click
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('cert-modal');
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    }
+});
