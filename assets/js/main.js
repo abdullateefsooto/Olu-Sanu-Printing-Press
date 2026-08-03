@@ -148,7 +148,7 @@ console.log('📞 Call us: 08066200781');
 // Initialize EmailJS with your Public Key
 (function() {
     emailjs.init({
-        publicKey: "YOUR_PUBLIC_KEY_HERE", // ← REPLACE WITH YOUR KEY
+        publicKey: "cpoMhUuVr2W6Pf90k", // ← REPLACE WITH YOUR KEY
     });
 })();
 
@@ -188,8 +188,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Send email using EmailJS
             emailjs.send(
-                'YOUR_SERVICE_ID_HERE',  // ← REPLACE WITH YOUR SERVICE ID
-                'YOUR_TEMPLATE_ID_HERE', // ← REPLACE WITH YOUR TEMPLATE ID
+                'service_88oimeu',  // ← REPLACE WITH YOUR SERVICE ID
+                'template_jyuqrul', // ← REPLACE WITH YOUR TEMPLATE ID
                 templateParams
             )
             .then(function(response) {
@@ -199,6 +199,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 form.reset();
                 btn.innerHTML = originalText;
                 btn.disabled = false;
+
+                setTimeout(() => {
+                    statusDiv.style.display = 'none';
+                    statusDiv.innerHTML = '';
+                }, 5000); // Hide status after 5 seconds
             })
             .catch(function(error) {
                 console.log('FAILED...', error);
