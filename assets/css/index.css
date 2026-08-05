@@ -943,7 +943,14 @@ nav ul li a.active::after {
 /* Mobile */
 @media (max-width: 768px) {
     .portfolio-carousel .portfolio-item {
-        height: 220px;
+        height: 300px;
+    }
+
+    .portfolio-carousel .portfolio-image img,
+    .portfolio-carousel .portfolio-image video {
+        object-fit: cover;  /* ← Shows FULL image */
+        width: 100%;
+        height: 100%;
     }
     
     .portfolio-carousel .owl-nav button {
