@@ -12,6 +12,9 @@
 
     <!-- ===== Main CSS ===== -->
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <!-- owl carousel -->
+     <link rel="stylesheet" href="./assets/owl carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/owl carousel/assets/owl.theme.default.min.css">
 </head>
 <body>
 
@@ -331,7 +334,7 @@ SERVICES
                 <span class="tag"><i class="fas fa-box"></i> Packaging</span>
                 <span class="tag"><i class="fas fa-tag"></i> Labels</span>
                 <span class="tag"><i class="fas fa-image"></i> Posters</span>
-                <span class="tag"><i class="fas fa-store"></i> POS Material</span>
+                <span class="tag"><i class="fas fa-store"></i> Point Of Sale Material</span>
                 <span class="tag"><i class="fas fa-sign"></i> Signage</span>
                 <span class="tag"><i class="fas fa-expand"></i> Large Format</span>
                 <span class="tag"><i class="fas fa-gift"></i> Merchandise</span>
@@ -340,8 +343,9 @@ SERVICES
         </div>
     </section>
     
+
 <!-- ============================================
-PORTFOLIO / GALLERY
+PORTFOLIO / GALLERY - OWL CAROUSEL
 ============================================ -->
 <section class="portfolio" id="portfolio">
     <div class="container">
@@ -351,65 +355,104 @@ PORTFOLIO / GALLERY
             See examples of our work — quality printing that brings ideas to life.
         </p>
 
-        <div class="portfolio-grid">
-            
-            <!-- IMAGE 1 -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="./assets/images/banner.jpg" alt="Printed Banner" />
-                </div>
-            </div>
-
-            <!-- IMAGE 2 -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="./assets/images/cutting.jpg" alt="Paper Cutting" />
-                </div>
-            </div>
-
-            <!-- YOUR ONE VIDEO (Click-to-play with controls/play icon) -->
-            <div class="portfolio-item portfolio-video">
-                <div class="portfolio-image">
-                    <!-- 'controls' adds the play button. 'preload="metadata"' loads the video thumbnail fast -->
-                    <video src="./assets/video/delivery.mp4" controls playsinline muted preload="metadata"></video>
-                </div>
-            </div>
-
-            <!-- IMAGE 3 -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="./assets/images/design.jpg" alt="Brand Design" />
-                </div>
-            </div>
-
-            <!-- IMAGE 4 (Fills the space where the 2nd video used to be) -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="./assets/images/finishing.jpg" alt="Finishing Process" />
-                </div>
-            </div>
-
-            <!-- IMAGE 5 -->
+        <div class="owl-carousel owl-theme portfolio-carousel">
+            <!-- Process -->
             <div class="portfolio-item">
                 <div class="portfolio-image">
                     <img src="./assets/images/process.jpg" alt="Production Process" />
                 </div>
             </div>
 
-            <!-- IMAGE 6 -->
+            <!-- Banner -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="./assets/images/banner.jpg" alt="Printed Banner" />
+                </div>
+            </div>
+
+            <!-- Book -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="./assets/images/book.jpg" alt="Book Printing" />
+                </div>
+            </div>
+
+            <!-- Cutting -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="./assets/images/cuting.jpg" alt="Cutting Process" />
+                </div>
+            </div>
+
+            <!-- Del 1 -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="./assets/images/del.jpg" alt="Delivery Process" />
+                </div>
+            </div>
+
+            <!-- Deli 2 -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="./assets/images/deli.jpg" alt="Delivery Service" />
+                </div>
+            </div>
+
+            <!-- Done -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="./assets/images/done.jpg" alt="Completed Work" />
+                </div>
+            </div>
+
+            <!-- Flex -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="./assets/images/flex.jpg" alt="Flex Banner" />
+                </div>
+            </div>
+
+            <!-- Cutting (second) -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="./assets/images/cutting.jpg" alt="Paper Cutting" />
+                </div>
+            </div>
+
+            <!-- Video -->
+            <div class="portfolio-item portfolio-video">
+                <div class="portfolio-image">
+                    <video src="./assets/video/delivery.mp4" controls playsinline autoplay muted preload="metadata"></video>
+                </div>
+            </div>
+
+            <!-- Design -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="./assets/images/design.jpg" alt="Brand Design" />
+                </div>
+            </div>
+
+            <!-- Finishing -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="./assets/images/finishing.jpg" alt="Finishing Process" />
+                </div>
+            </div>
+
+            <!-- Delivery -->
             <div class="portfolio-item">
                 <div class="portfolio-image">
                     <img src="./assets/images/delivery.jpg" alt="Delivery" />
                 </div>
             </div>
 
-            <!-- IMAGE 7 -->
+            <!-- Jotter -->
             <div class="portfolio-item">
                 <div class="portfolio-image">
                     <img src="./assets/images/jotter.jpg" alt="Custom Jotters" />
                 </div>
             </div>
-
         </div>
     </div>
 </section>
@@ -433,7 +476,7 @@ PORTFOLIO / GALLERY
                     <h4>Olaniyan Azeez Adeyemi</h4>
                     <div class="role">Ceo / md</div>
                     <div class="years">16 years experience</div>
-                    <div class="bio">B.Tech. Fine & Applied Arts (Graphic Design) — LAUTECH</div>
+                    <div class="bio">B.Tech. Fine & Applied Arts (Graphic Design) — Ladoke Akintola University of Technology (LAUTECH), Ogbomoso, Oyo State.</div>
                 </div>
 
                 <div class="team-card">
@@ -642,6 +685,46 @@ PORTFOLIO / GALLERY
     <!-- ============================================
     JAVASCRIPT
     ============================================ -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/owl carousel/owl.carousel.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <!-- ===== OWL CAROUSEL INIT ===== -->
+<script>
+    $(document).ready(function(){
+    $(".portfolio-carousel").owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        touchDrag: true,
+        mouseDrag: true,
+        responsive: {
+            0: {        /* Mobile (small) */
+                items: 1,
+                stagePadding: 10
+            },
+            600: {      /* Mobile (large) */
+                items: 2,
+                stagePadding: 15
+            },
+            992: {      /* Tablet / Laptop */
+                items: 3,
+                stagePadding: 20
+            },
+            1200: {     /* Desktop / Large Laptop */
+                items: 4,
+                stagePadding: 30
+            }
+        },
+        navText: [
+            "<i class='fas fa-chevron-left'></i>",
+            "<i class='fas fa-chevron-right'></i>"
+        ]
+    });
+});
+</script>
 </body>
 </html>
