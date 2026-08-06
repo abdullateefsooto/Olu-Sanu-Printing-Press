@@ -12,9 +12,6 @@
 
     <!-- ===== Main CSS ===== -->
     <link rel="stylesheet" href="./assets/css/index.css" />
-    <!-- owl carousel -->
-     <link rel="stylesheet" href="./assets/owl carousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="./assets/owl carousel/assets/owl.theme.default.min.css">
 </head>
 <body>
 
@@ -343,9 +340,8 @@ SERVICES
         </div>
     </section>
     
-
-<!-- ============================================
-PORTFOLIO / GALLERY - OWL CAROUSEL
+    <!-- ============================================
+    PORTFOLIO / GALLERY - SIMPLE GRID
 ============================================ -->
 <section class="portfolio" id="portfolio">
     <div class="container">
@@ -355,67 +351,46 @@ PORTFOLIO / GALLERY - OWL CAROUSEL
             See examples of our work — quality printing that brings ideas to life.
         </p>
 
-        <div class="owl-carousel owl-theme portfolio-carousel">
-            <!-- Process -->
+        <div class="portfolio-grid">
             <div class="portfolio-item">
                 <div class="portfolio-image">
                     <img src="./assets/images/process.jpg" alt="Production Process" />
                 </div>
             </div>
 
-            <!-- Banner -->
             <div class="portfolio-item">
                 <div class="portfolio-image">
-                    <img src="./assets/images/banner.jpg" alt="Printed Banner" />
+                    <img src="./assets/images/cutting.jpg" alt="Paper Cutting" />
                 </div>
             </div>
-
-            <!-- Book -->
+            
             <div class="portfolio-item">
                 <div class="portfolio-image">
-                    <img src="./assets/images/book.jpg" alt="Book Printing" />
+                    <img src="./assets/images/design.jpg" alt="Brand Design" />
                 </div>
             </div>
-
-            <!-- Cutting -->
+            
             <div class="portfolio-item">
                 <div class="portfolio-image">
-                    <img src="./assets/images/cuting.jpg" alt="Cutting Process" />
+                    <img src="./assets/images/finishing.jpg" alt="Finishing Process" />
                 </div>
             </div>
-
-            <!-- Del 1 -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="./assets/images/del.jpg" alt="Delivery Process" />
-                </div>
-            </div>
-
-            <!-- Deli 2 -->
+            
             <div class="portfolio-item">
                 <div class="portfolio-image">
                     <img src="./assets/images/deli.jpg" alt="Delivery Service" />
                 </div>
             </div>
-
-            <!-- Done -->
+            
             <div class="portfolio-item">
                 <div class="portfolio-image">
-                    <img src="./assets/images/done.jpg" alt="Completed Work" />
+                    <img src="./assets/images/delivery.jpg" alt="Delivery" />
                 </div>
             </div>
-
-            <!-- Flex -->
+            
             <div class="portfolio-item">
                 <div class="portfolio-image">
                     <img src="./assets/images/flex.jpg" alt="Flex Banner" />
-                </div>
-            </div>
-
-            <!-- Cutting (second) -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="./assets/images/cutting.jpg" alt="Paper Cutting" />
                 </div>
             </div>
 
@@ -425,38 +400,9 @@ PORTFOLIO / GALLERY - OWL CAROUSEL
                     <video src="./assets/video/delivery.mp4" playsinline autoplay muted preload="metadata"></video>
                 </div>
             </div>
-
-            <!-- Design -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="./assets/images/design.jpg" alt="Brand Design" />
-                </div>
-            </div>
-
-            <!-- Finishing -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="./assets/images/finishing.jpg" alt="Finishing Process" />
-                </div>
-            </div>
-
-            <!-- Delivery -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="./assets/images/delivery.jpg" alt="Delivery" />
-                </div>
-            </div>
-
-            <!-- Jotter -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="./assets/images/jotter.jpg" alt="Custom Jotters" />
-                </div>
-            </div>
         </div>
     </div>
 </section>
-
     <!-- ============================================
     TEAM
     ============================================ -->
@@ -685,45 +631,6 @@ PORTFOLIO / GALLERY - OWL CAROUSEL
     <!-- ============================================
     JAVASCRIPT
     ============================================ -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/owl carousel/owl.carousel.min.js"></script>
     <script src="./assets/js/main.js"></script>
-    <!-- ===== OWL CAROUSEL INIT ===== -->
-<script>
-    $(document).ready(function(){
-    $(".portfolio-carousel").owlCarousel({
-        loop: true,
-        margin: 20,
-        nav: true,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        touchDrag: true,
-        mouseDrag: true,
-        responsive: {
-            0: {        /* Mobile (small) */
-                items: 1,
-                stagePadding: 10
-            },
-            600: {      /* Mobile (large) */
-                items: 2,
-                stagePadding: 15
-            },
-            992: {      /* Tablet / Laptop */
-                items: 3,
-                stagePadding: 20
-            },
-            1200: {     /* Desktop / Large Laptop */
-                items: 4,
-                stagePadding: 30
-            }
-        },
-        navText: [
-            "<i class='fas fa-chevron-left'></i>",
-            "<i class='fas fa-chevron-right'></i>"
-        ]
-    });
-});
-</script>
 </body>
 </html>
