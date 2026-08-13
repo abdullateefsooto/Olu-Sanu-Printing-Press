@@ -974,6 +974,7 @@ nav ul li a.active::after {
 .certificates {
     padding: 100px 0;
     background: linear-gradient(180deg, var(--light-bg) 0%, #ffffff 100%);
+    border-radius: 20px;
 }
 
 .cert-grid {
@@ -1225,6 +1226,10 @@ nav ul li a.active::after {
     display: flex;
     align-items: center;
     gap: 14px;
+}
+.p {
+    opacity: 0.9;
+
 }
 
 .contact-info p i {
